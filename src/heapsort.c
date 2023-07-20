@@ -19,11 +19,11 @@
  * Sift an element up in a heap.
  */
 int heap_siftup(int * elements, int max, int idx) {
-    if (idx >= max)
-        return -1;
+    //if (idx >= max)
+    //    return -1;
     int pidx;
     while (idx != 0) {
-        pidx = (idx - 1) / 2;
+        pidx = (idx - 1) >> 1;
         if (elements[idx] < elements[pidx]) {
             SWAP(elements[idx], elements[pidx]);
         } else {
@@ -49,8 +49,8 @@ int heapify(int * elements, int ct) {
  */
 int heap_pop(int * elements, int ct) {
 
-    if (ct == 0)
-        return -1;
+    //if (ct == 0)
+    //    return -1;
 
     int ret = elements[0];
     int idx = 0;
