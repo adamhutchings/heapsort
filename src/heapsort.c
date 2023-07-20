@@ -106,6 +106,7 @@ int main(int argc, char ** argv) {
     for (int i = 0; i < ELEMENT_CT; ++i) {
         fscanf(fp, "%d\n", &ints[i]);
     }
+    fclose(fp);
 
     printf("Heap sort: created file with %d elements.\n", ELEMENT_CT);
 
